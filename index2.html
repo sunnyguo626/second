@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>智能社--http://www.zhinengshe.com</title>
+    <style>
+        span{
+            font-size: 50px;
+            color: #ffffff;
+        }
+        body{
+            background: #000;
+        }
+    </style>
+    <script src="move.js"></script>
+    <script>
+        window.onload = function () {
+            var str = '9月28日，克强总理圆满结束美洲之行回到北京。纽约—渥太华—蒙特利尔—哈瓦那，还技术经停了葡萄牙特塞拉，5城11天，行程绕地球不止一圈。记者完全累趴，但咱总理始终神采奕奕。出席第71届联大系列高级别会议，对加拿大、古巴进行正式。跟着总理全程跑下来，感觉这次出访就像一部以“家·国·世界”为主题的纪录片。“家”，拓展领导人私谊，亲切到“家”;“国”，推动国与国合作，蓄势增力;“世界”，亮相最大多边舞台，回应世界关切。既有生动细节，也有思想激荡;时而细腻暖心，时而大开大合。这部“家·国·世界”纪录片，世界喝彩。记者精心选出10张图，带你重温其中的精彩瞬间。';
+            var timer=null;
+            for(var i=0;i<str.length;i++){
+                var oSpan = document.createElement('span');
+                oSpan.innerHTML=str.charAt(i);
+                oSpan.style.opacity=0;
+                document.body.appendChild(oSpan);
+            }
+            var aSpan = document.getElementsByTagName('span');
+            var n =0;
+            timer=setInterval(function(){
+//                aSpan[n].style.opacity=1;
+                move(aSpan[n],{opacity:1});
+                n++;
+                if(n==aSpan.length){
+                    clearInterval(timer)
+                }
+            },200);
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
